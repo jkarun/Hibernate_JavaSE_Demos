@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory >
+        <property name="hibernate.connection.driver_class">org.sqlite.JDBC</property>
+        <property name="hibernate.dialect">com.enigmabridge.hibernate.dialect.SQLiteDialect</property>
+        <property name="hibernate.connection.url">jdbc:sqlite:E:\\arun files\\e books\\SpringHibernateDB\\hibernate_db.sqlite</property>
+        <property name="hibernate.connection.username">sa</property>
+        <property name="hibernate.connection.password"></property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
+
+<!-- EhCache Config-->
+        <property name="hibernate.cache.use_second_level_cache">true</property>
+        <property name="net.sf.ehcache.configurationResourceName">ehcache.xml</property>
+        <property name="hibernate.cache.region.factory_class">org.hibernate.cache.ehcache.EhCacheRegionFactory</property> 
+<!-- eof EhCache Config-->
+
+        <property name="hibernate.show_sql">true</property>
+        <!-- <mapping package="com.arun.model"/> -->
+       <!--  <mapping class="com.arun.helloworld.Employee"></mapping>  -->
+
+        <mapping class="com.arun.hql.Employee"></mapping> 
+
+<!-- EhCache class-->
+        <mapping class="com.arun.EhCache.Country"></mapping> 
+
+<!-- Inheritance mapping -->
+		
+		<!-- table hierachy or single table-->
+        <mapping class="com.arun.inheritance.singletable.Employee_singletable"></mapping> 
+        <mapping class="com.arun.inheritance.singletable.Regular_employee"></mapping> 
+        <mapping class="com.arun.inheritance.singletable.Contract_emp"></mapping> 
+        
+        <!-- table per class with union -->
+        <mapping class="com.arun.inheritance.tableperclass.Emp_perclass_union"></mapping> 
+        <mapping class="com.arun.inheritance.tableperclass.RegularEmp_perclass_union"></mapping> 
+        <mapping class="com.arun.inheritance.tableperclass.ContractEmp_perclass_union"></mapping> 
+        
+        <!-- table per subclass -->
+        <mapping class="com.arun.inheritance.tablepersubclass.Emp_subclass"></mapping> 
+        <mapping class="com.arun.inheritance.tablepersubclass.RegularEmp_subclass"></mapping> 
+        <mapping class="com.arun.inheritance.tablepersubclass.ContractEmp_subclass"></mapping>
+        
+<!-- mapping association -->
+        
+	<!-- One To One  -->
+		<!-- Shared Primary key -->
+			<!-- Unidirectional -->
+				<mapping class="com.arun.associtation.oneToone.sharedprimarykey.Unidirectional.Adreess_sharedPrimaryKey"/> 
+				<mapping class="com.arun.associtation.oneToone.sharedprimarykey.Unidirectional.User_sharedPrimaryKey"/> 
+			<!-- Bidirectional -->
+			<!-- error will show if entities have same name. So following code is commented-->
+				<!--  
+				<mapping class="com.arun.associtation.oneToone.sharedprimarykey.Bidirectional.Adreess_sharedPrimaryKey"/> 
+				<mapping class="com.arun.associtation.oneToone.sharedprimarykey.Bidirectional.User_sharedPrimaryKey"/> 
+        		-->
+	<!-- One To One  -->
+		<!-- Shared Primary key -->
+				<mapping class="com.arun.associtation.oneToMany.foreignkey.Bidirectional.Student_otm_fkey"/> 
+				<mapping class="com.arun.associtation.oneToMany.foreignkey.Bidirectional.University_otm_fkey"/> 
+        		
+        
+        
+    </session-factory>
+</hibernate-configuration>
