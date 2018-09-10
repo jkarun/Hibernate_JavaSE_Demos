@@ -6,6 +6,8 @@ import io.reactivex.Observable;
 
 public class RxJavaTest {
 
+	
+	
 	public static void main(String[] args) {
 		RxJavaTest test = new RxJavaTest();
 		test.basicRxJava();
@@ -20,6 +22,6 @@ public class RxJavaTest {
 		Consumer<? super String> consumer = System.out::println;
 
 		// Attaching producer to consumer
-		observable.subscribe(consumer);
+//		observable.subscribe(consumer);
 	}
 }
