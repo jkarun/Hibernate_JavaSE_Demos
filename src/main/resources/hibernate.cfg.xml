@@ -6,7 +6,7 @@
     <session-factory >
         <property name="hibernate.connection.driver_class">org.sqlite.JDBC</property>
         <property name="hibernate.dialect">com.enigmabridge.hibernate.dialect.SQLiteDialect</property>
-        <property name="hibernate.connection.url">jdbc:sqlite:D:\\arun_babu\\sqlite_db\\hibernate_db.sqlite</property>
+        <property name="hibernate.connection.url">jdbc:sqlite:./hibernate_db.sqlite</property>
         <property name="hibernate.connection.username">sa</property>
         <property name="hibernate.connection.password"></property>
         <property name="hibernate.hbm2ddl.auto">update</property>
