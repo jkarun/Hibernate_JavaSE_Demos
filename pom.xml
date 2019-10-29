@@ -19,9 +19,15 @@
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-core</artifactId>
-			<version>4.3.11.Final</version>
+			<version>LATEST</version>
 		</dependency>
 
+		<!-- Mysql Connector -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.38</version>
+		</dependency>
 		<!-- EhCache Core APIs -->
 		<dependency>
 			<groupId>net.sf.ehcache</groupId>
@@ -37,16 +43,9 @@
 		</dependency>
 
 		<!-- C3p0 API -->
-		<dependency>
-			<groupId>org.hibernate</groupId>
-			<artifactId>hibernate-c3p0</artifactId>
-			<version>4.3.11.Final</version>
-		</dependency>
-		<dependency>
-			<groupId>c3p0</groupId>
-			<artifactId>c3p0</artifactId>
-			<version>0.9.1.2</version>
-		</dependency>
+		<!-- <dependency> <groupId>org.hibernate</groupId> <artifactId>hibernate-c3p0</artifactId> 
+			<version>4.3.11.Final</version> </dependency> <dependency> <groupId>c3p0</groupId> 
+			<artifactId>c3p0</artifactId> <version>0.9.1.2</version> </dependency> -->
 
 		<dependency>
 			<groupId>org.hibernate</groupId>
@@ -64,10 +63,9 @@
 		<dependency>
 			<groupId>io.reactivex.rxjava2</groupId>
 			<artifactId>rxjava</artifactId>
-			<version>LATEST</version>
+			<version>2.1.0</version>
 		</dependency>
 
-	
 	</dependencies>
 	<build>
 		<plugins>
